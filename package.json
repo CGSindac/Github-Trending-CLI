@@ -1,0 +1,25 @@
+{
+  "name": "github-trending-cli",
+  "version": "1.0.0",
+  "description": "A CLI that retrieves trending repositories from GitHub using their API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CGSindac/Github-Trending-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CGSindac/Github-Trending-CLI/issues"
+  },
+  "homepage": "https://github.com/CGSindac/Github-Trending-CLI#readme",
+  "dependencies": {
+    "octokit": "^5.0.5"
+  }
+}
