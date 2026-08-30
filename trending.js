@@ -28,7 +28,7 @@ function setFilters(args = {})
             {
                 console.log(`Unidentified filter on ${flag}.`);
                 console.log(`\nProper Usage:`);
-                console.log(`--duration <day/week/month/year> | defaul:t week `);
+                console.log(`--duration <day/week/month/year> | default: week `);
                 console.log(`--limit <val> | default: 10`);
 
                 process.exit(1); //  Stops the program
@@ -39,7 +39,7 @@ function setFilters(args = {})
             {
                 console.log(`Missing Value on ${flag}.`);
                 console.log(`\nProper Usage:`);
-                console.log(`--duration <day/week/month/year> | defaul:t week `);
+                console.log(`--duration <day/week/month/year> | default: week `);
                 console.log(`--limit <val> | default: 10`);
             }
 
@@ -62,18 +62,18 @@ function setFilters(args = {})
     {
         console.log(`Improper value on filter: \'--duration\'.`);
         console.log(`\nProper Usage:`);
-        console.log(`--duration <day/week/month/year> | defaul:t week `);
+        console.log(`--duration <day/week/month/year> | default: week `);
         console.log(`--limit <val> | default: 10`);
 
         process.exit(1);
     }
 
     // Check if value is numerical
-    if (isNaN(finalObj.limit))
+    if (isNaN(finalObj.limit) || finalObj.limit[0] === '-' || (finalObj.limit.length >= 3 && finalObj.limit != '100'))
     {
         console.log(`Improper value on filter: \'--limit\'.`);
         console.log(`\nProper Usage:`);
-        console.log(`--duration <day/week/month/year> | defaul:t week `);
+        console.log(`--duration <day/week/month/year> | default: week `);
         console.log(`--limit <val> | default: 10`);
 
         process.exit(1);
